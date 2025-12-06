@@ -1,0 +1,30 @@
+package com.movieapi;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Movie {
+    private int id;
+    private String title;
+    private List<Integer> ratings = new ArrayList<>();
+
+    public Movie() {}
+
+    public Movie(int id, String title) {
+        this.id = id;
+        this.title = title;
+    }
+
+    public int getId() { return id; }
+    public String getTitle() { return title; }
+    public List<Integer> getRatings() { return ratings; }
+
+    public void addRating(int rating) { ratings.add(rating); }
+
+    public double getAverageRating() {
+        if (ratings.isEmpty()) return 0.0;
+        int sum = 0;
+        for (int r : ratings) sum += r;
+        return (double) sum / ratings.size();
+    }
+}
