@@ -34,7 +34,16 @@ http://localhost:4567
 - **POST /movies** → Add a movie  
 - **POST /movies/:id/rate** → Rate a movie  
 - **GET /movies/:id/average** → Get average rating  
-- **GET /movies/most-rated** → List most rated movies  
+- **GET /movies/most-rated** → List most rated movies
+
+❗ Common Issues & Fixes
+
+| Error | Explanation | Solution |
+|-------|-------------|----------|
+| **Port 4567 already in use** | Spark default port busy | Stop previous instance or change port |
+| **ClassNotFoundException / Gson missing** | Dependency missing | Ensure Maven installed & dependencies present |
+| **Java version incompatible** | Running on older Java | Upgrade to Java 17+ |
+
 
 ## 📚 References
 
